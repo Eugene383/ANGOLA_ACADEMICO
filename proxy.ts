@@ -49,7 +49,7 @@ export async function proxy(request: NextRequest) {
     if (role === 'gestor_ies') {
       return NextResponse.redirect(new URL('/ies/dashboard', request.url))
     }
-    return NextResponse.redirect(new URL('/explorar', request.url))
+    
   }
 
   // ── 3. /admin → só admins
