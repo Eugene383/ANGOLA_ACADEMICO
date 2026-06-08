@@ -32,7 +32,7 @@ export async function criarIESAction(
 
   const raw = Object.fromEntries(formData)
   const parsed = criarIESSchema.safeParse(raw)
-  if (!parsed.success) return { error: parsed.error.errors[0].message }
+  if (!parsed.success) return { error: parsed.error.erro.message }
 
   const admin = createAdminClient()
   const { error } = await admin.from('ies').insert({
