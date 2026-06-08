@@ -49,7 +49,7 @@ export default function GraficoProvincias({ dados }: { dados: DadoProvincia[] })
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
               }}
-              formatter={(v) => [Number(v).toLocaleString('pt-AO'), 'Inscritos']}
+              formatter={(v) => [v != null ? Number(v).toLocaleString('pt-AO') : '0', 'Inscritos']}
             />
             <Bar dataKey="totalInscritos" fill="#3b82f6" radius={[4, 4, 0, 0]} />
           </BarChart>
