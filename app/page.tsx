@@ -34,7 +34,7 @@ export default function Home() {
         } else if (role === 'gestor_ies') {
           router.push('/ies/dashboard')
         } else {
-          router.push('/explorar')
+          router.push('/')
         }
       }
     }
