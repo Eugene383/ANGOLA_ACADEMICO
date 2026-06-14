@@ -20,22 +20,13 @@ export default function GraficoProvincias({ dados }: { dados: DadoProvincia[] })
     .map(d => ({ ...d, nome: d.codigo }))
 
   return (
-<<<<<<< HEAD:src/components/dashboard/GraficoProvincias.tsx
-    <div className="bg-white rounded-lg sm:rounded-xl border border-gray-200">
-      <div className="px-4 sm:px-5 py-4 border-b border-gray-200 flex items-center gap-2">
-=======
-    <div className="bg-white rounded-xl border border-gray-200">
-      <div className="px-5 py-4 border-b border-gray-200 flex items-center gap-2">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/GraficoProvincias.tsx
+      <div className="bg-white rounded-lg sm:rounded-xl border border-gray-200">
+    <div className="px-4 sm:px-5 py-4 border-b border-gray-200 flex items-center gap-2">
         <BarChart3 className="w-4 h-4 text-gray-400" />
         <h2 className="text-sm font-semibold text-gray-800">Inscritos por província</h2>
         <span className="text-xs text-gray-400">(top 10)</span>
       </div>
-<<<<<<< HEAD:src/components/dashboard/GraficoProvincias.tsx
-      <div className="p-2 sm:p-4 overflow-x-auto">
-=======
-      <div className="p-4">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/GraficoProvincias.tsx
+    <div className="p-2 sm:p-4 overflow-x-auto">
         <ResponsiveContainer width="100%" height={280}>
           <BarChart data={top10} margin={{ top: 4, right: 8, left: 0, bottom: 4 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -58,11 +49,7 @@ export default function GraficoProvincias({ dados }: { dados: DadoProvincia[] })
                 border: '1px solid #e5e7eb',
                 boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
               }}
-<<<<<<< HEAD:src/components/dashboard/GraficoProvincias.tsx
               formatter={(v: number) => [v.toLocaleString('pt-AO'), 'Inscritos']}
-=======
-              formatter={(v) => [v != null ? Number(v).toLocaleString('pt-AO') : '0', 'Inscritos']}
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/GraficoProvincias.tsx
             />
             <Bar dataKey="totalInscritos" fill="#3b82f6" radius={[4, 4, 0, 0]} />
           </BarChart>

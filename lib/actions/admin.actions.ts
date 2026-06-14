@@ -8,10 +8,7 @@ import type { FormState } from './auth.actions'
 
 // ── Criar IES ──────────────────────────────────────────────
 const criarIESSchema = z.object({
-<<<<<<< HEAD:src/lib/actions/admin.actions.ts
   id:           z.string().uuid().optional(),
-=======
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:lib/actions/admin.actions.ts
   nome:         z.string().min(3, 'Nome obrigatório'),
   sigla:        z.string().min(2).max(10),
   tipo:         z.enum(['universidade', 'instituto_superior', 'escola_superior', 'academia']),
@@ -36,8 +33,7 @@ export async function criarIESAction(
 
   const raw = Object.fromEntries(formData)
   const parsed = criarIESSchema.safeParse(raw)
-<<<<<<< HEAD:src/lib/actions/admin.actions.ts
-  if (!parsed.success) return { error: parsed.error.errors[0].message }
+  if (!parsed.success) return { error: parsed.error.issues[0].message }
 
   const admin = createAdminClient()
   const payload = {
@@ -46,18 +42,8 @@ export async function criarIESAction(
     tipo: parsed.data.tipo,
     natureza: parsed.data.natureza,
     provincia_id: parsed.data.provincia_id,
-=======
-  if (!parsed.success) return { error: parsed.error.issues[0].message }
-
-  const admin = createAdminClient()
-  const { error } = await admin.from('ies').insert({
-    ...parsed.data,
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:lib/actions/admin.actions.ts
-    ano_fundacao: parsed.data.ano_fundacao
-      ? parseInt(parsed.data.ano_fundacao)
-      : null,
+    ano_fundacao: parsed.data.ano_fundacao ? parseInt(parsed.data.ano_fundacao) : null,
     website: parsed.data.website || null,
-<<<<<<< HEAD:src/lib/actions/admin.actions.ts
     email: parsed.data.email || null,
   }
 
@@ -66,12 +52,6 @@ export async function criarIESAction(
     : await admin.from('ies').insert(payload)
 
   if (result.error) return { error: result.error.message }
-=======
-    email:   parsed.data.email   || null,
-  })
-
-  if (error) return { error: error.message }
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:lib/actions/admin.actions.ts
 
   revalidatePath('/admin')
   revalidatePath('/admin/ies')

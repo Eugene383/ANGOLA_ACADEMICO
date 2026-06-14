@@ -24,12 +24,9 @@ export type CursoComDetalhes = Curso & {
   ies: Pick<IES, 'id' | 'nome' | 'sigla'>
   area: Pick<AreaConhecimento, 'id' | 'nome' | 'codigo_isced'>
   nivel: Pick<NivelEnsino, 'id' | 'nome' | 'codigo_isced'>
-<<<<<<< HEAD:src/types/domain.types.ts
   vagas?: Array<Pick<Vaga, 'vagas_ofertadas' | 'vagas_preenchidas' | 'ano_lectivo_id'>>
   inscritos?: Array<Pick<Inscrito, 'total' | 'ano_lectivo_id'>>
-  graduados?: Array<Pick<Graduado, 'total' | 'ano_lectivo_id'>>
-=======
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:types/domain.types.ts
+  graduados?: Array<Pick<Graduado, 'total' | 'ano_lectivo_id'>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:types/domain.types.ts
 }
 
 export type IESComProvincia = IES & {

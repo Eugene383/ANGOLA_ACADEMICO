@@ -1,14 +1,8 @@
 'use client'
-
-<<<<<<< HEAD:src/components/dashboard/DashboardWrapper.tsx
 import { useState } from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header'
 import { Menu } from 'lucide-react'
-=======
-import Sidebar from './Sidebar'
-import Header from './Header'
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/DashboardWrapper.tsx
 
 interface DashboardWrapperProps {
   children: React.ReactNode
@@ -20,7 +14,6 @@ interface DashboardWrapperProps {
 }
 
 export default function DashboardWrapper({ children, user }: DashboardWrapperProps) {
-<<<<<<< HEAD:src/components/dashboard/DashboardWrapper.tsx
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
@@ -47,14 +40,6 @@ export default function DashboardWrapper({ children, user }: DashboardWrapperPro
         
         {/* Main */}
         <main className="flex-1 overflow-y-auto p-4 sm:p-6">
-=======
-  return (
-    <div className="flex h-screen bg-gray-50">
-      <Sidebar />
-      <div className="flex flex-col flex-1 overflow-hidden">
-        <Header user={user} />
-        <main className="flex-1 overflow-y-auto p-6">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/DashboardWrapper.tsx
           {children}
         </main>
       </div>

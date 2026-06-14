@@ -22,7 +22,6 @@ export default function StatCard({
 }: StatCardProps) {
   const c = cores[cor]
   return (
-<<<<<<< HEAD:src/components/dashboard/StatCard.tsx
     <div className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-3 sm:p-5">
       <div className="flex items-start justify-between mb-3 gap-2">
         <div className={clsx('w-8 sm:w-9 h-8 sm:h-9 rounded-lg flex items-center justify-center flex-shrink-0', c.bg)}>
@@ -40,24 +39,6 @@ export default function StatCard({
       </p>
       <p className="text-xs sm:text-sm font-medium text-gray-700 line-clamp-2">{titulo}</p>
       {subtitulo && <p className="text-xs text-gray-400 mt-0.5 line-clamp-1">{subtitulo}</p>}
-=======
-    <div className="bg-white rounded-xl border border-gray-200 p-5">
-      <div className="flex items-start justify-between mb-3">
-        <div className={clsx('w-9 h-9 rounded-lg flex items-center justify-center', c.bg)}>
-          <Icon className={clsx('w-5 h-5', c.icon)} />
-        </div>
-        {tendencia && (
-          <span className={clsx('text-xs font-medium px-2 py-0.5 rounded-full', c.badge)}>
-            {tendencia.valor > 0 ? '+' : ''}{tendencia.valor}% {tendencia.label}
-          </span>
-        )}
-      </div>
-      <p className="text-2xl font-semibold text-gray-900 mb-0.5">
-        {typeof valor === 'number' ? valor.toLocaleString('pt-AO') : valor}
-      </p>
-      <p className="text-sm font-medium text-gray-700">{titulo}</p>
-      {subtitulo && <p className="text-xs text-gray-400 mt-0.5">{subtitulo}</p>}
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/StatCard.tsx
     </div>
   )
 }

@@ -19,14 +19,10 @@ export function useCursos(filtros?: FiltrosConsulta & { ies_id?: string }) {
         *,
         ies:ies(id, nome, sigla),
         area:areas_conhecimento(id, nome, codigo_isced),
-<<<<<<< HEAD:src/hooks/useCursos.ts
         nivel:niveis_ensino(id, nome, codigo_isced),
         vagas(vagas_ofertadas,vagas_preenchidas,ano_lectivo_id),
         inscritos(total,ano_lectivo_id),
         graduados(total,ano_lectivo_id)
-=======
-        nivel:niveis_ensino(id, nome, codigo_isced)
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:hooks/useCursos.ts
       `)
       .eq('activo', true)
       .order('nome')

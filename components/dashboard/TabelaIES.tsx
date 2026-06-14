@@ -29,19 +29,11 @@ export default function TabelaIES() {
   const { provincias } = useProvincias()
 
   return (
-<<<<<<< HEAD:src/components/dashboard/TabelaIES.tsx
     <div className="bg-white rounded-lg sm:rounded-xl border border-gray-200">
       {/* Header */}
       <div className="px-4 sm:px-5 py-3 sm:py-4 border-b border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4 text-gray-400 flex-shrink-0" />
-=======
-    <div className="bg-white rounded-xl border border-gray-200">
-      {/* Header */}
-      <div className="px-5 py-4 border-b border-gray-200 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Building2 className="w-4 h-4 text-gray-400" />
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/TabelaIES.tsx
           <h2 className="text-sm font-semibold text-gray-800">Instituições</h2>
           <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
             {ies.length}
@@ -56,20 +48,12 @@ export default function TabelaIES() {
       </div>
 
       {/* Filtros */}
-<<<<<<< HEAD:src/components/dashboard/TabelaIES.tsx
       <div className="px-4 sm:px-5 py-3 border-b border-gray-100 flex flex-col sm:flex-row gap-2">
-=======
-      <div className="px-5 py-3 border-b border-gray-100 flex gap-2">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/TabelaIES.tsx
         <select
           value={provinciaId}
           onChange={e => setProvinciaId(e.target.value)}
           className="text-xs border border-gray-200 rounded-lg px-2 py-1.5 text-gray-600
-<<<<<<< HEAD:src/components/dashboard/TabelaIES.tsx
-                     focus:outline-none focus:ring-1 focus:ring-blue-500 flex-1"
-=======
-                     focus:outline-none focus:ring-1 focus:ring-blue-500"
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/TabelaIES.tsx
+             focus:outline-none focus:ring-1 focus:ring-blue-500 flex-1"
         >
           <option value="">Todas as províncias</option>
           {provincias.map(p => (
@@ -80,11 +64,7 @@ export default function TabelaIES() {
           value={natureza}
           onChange={e => setNatureza(e.target.value)}
           className="text-xs border border-gray-200 rounded-lg px-2 py-1.5 text-gray-600
-<<<<<<< HEAD:src/components/dashboard/TabelaIES.tsx
                      focus:outline-none focus:ring-1 focus:ring-blue-500 flex-1"
-=======
-                     focus:outline-none focus:ring-1 focus:ring-blue-500"
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/TabelaIES.tsx
         >
           <option value="">Todas as naturezas</option>
           <option value="publica">Pública</option>
@@ -96,20 +76,13 @@ export default function TabelaIES() {
       {/* Lista */}
       <div className="divide-y divide-gray-100 max-h-80 overflow-y-auto">
         {loading ? (
-<<<<<<< HEAD:src/components/dashboard/TabelaIES.tsx
           <div className="px-4 sm:px-5 py-6 sm:py-8 text-center text-sm text-gray-400">A carregar...</div>
         ) : ies.length === 0 ? (
           <div className="px-4 sm:px-5 py-6 sm:py-8 text-center text-sm text-gray-400">
-=======
-          <div className="px-5 py-8 text-center text-sm text-gray-400">A carregar...</div>
-        ) : ies.length === 0 ? (
-          <div className="px-5 py-8 text-center text-sm text-gray-400">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/TabelaIES.tsx
             Nenhuma instituição encontrada
           </div>
         ) : (
           ies.slice(0, 8).map(i => (
-<<<<<<< HEAD:src/components/dashboard/TabelaIES.tsx
             <div key={i.id} className="px-4 sm:px-5 py-3 flex items-center justify-between hover:bg-gray-50 gap-2">
               <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium text-gray-800 truncate">{i.nome}</p>
@@ -117,15 +90,6 @@ export default function TabelaIES() {
               </div>
               <span className={clsx(
                 'text-xs font-medium px-2 py-0.5 rounded-full ml-2 flex-shrink-0 whitespace-nowrap',
-=======
-            <div key={i.id} className="px-5 py-3 flex items-center justify-between hover:bg-gray-50">
-              <div className="min-w-0 flex-1">
-                <p className="text-sm font-medium text-gray-800 truncate">{i.nome}</p>
-                <p className="text-xs text-gray-400">{i.sigla} · {i.provincia.nome}</p>
-              </div>
-              <span className={clsx(
-                'text-xs font-medium px-2 py-0.5 rounded-full ml-3 flex-shrink-0',
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/TabelaIES.tsx
                 badgeNatureza[i.natureza]
               )}>
                 {labelNatureza[i.natureza]}

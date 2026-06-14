@@ -62,29 +62,17 @@ export default async function AdminPage() {
   ])
 
   return (
-<<<<<<< HEAD:src/app/(dashboard)/admin/page.tsx
     <div className="space-y-4 sm:space-y-6">
       {/* Título */}
       <div>
         <h1 className="text-lg sm:text-xl font-semibold text-gray-900">Visão geral nacional</h1>
-        <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
-=======
-    <div className="space-y-6">
-      {/* Título */}
-      <div>
-        <h1 className="text-xl font-semibold text-gray-900">Visão geral nacional</h1>
-        <p className="text-sm text-gray-500 mt-0.5">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
+        <p className="text-xs sm:text-sm text-gray-500 mt-0.5"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
           Indicadores consolidados do ensino superior em Angola
         </p>
       </div>
 
       {/* Cards */}
-<<<<<<< HEAD:src/app/(dashboard)/admin/page.tsx
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-=======
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
         <StatCard
           titulo="Instituições activas"
           valor={stats.totalIES ?? 0}
@@ -116,7 +104,6 @@ export default async function AdminPage() {
       </div>
 
       {/* Taxa de feminização */}
-<<<<<<< HEAD:src/app/(dashboard)/admin/page.tsx
       <div className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-4 sm:p-5">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
           <div className="flex items-center gap-3 flex-shrink-0">
@@ -129,20 +116,7 @@ export default async function AdminPage() {
             </div>
           </div>
           <div className="flex-1 sm:ml-auto sm:w-48">
-            <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
-=======
-      <div className="bg-white rounded-xl border border-gray-200 p-5">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-pink-50 rounded-lg flex items-center justify-center">
-            <TrendingUp className="w-5 h-5 text-pink-600" />
-          </div>
-          <div>
-            <p className="text-2xl font-semibold text-gray-900">{stats.taxaFeminizacao}%</p>
-            <p className="text-sm text-gray-600">Taxa de feminização</p>
-          </div>
-          <div className="ml-auto">
-            <div className="w-48 h-2 bg-gray-100 rounded-full overflow-hidden">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
+            <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
               <div
                 className="h-full bg-pink-400 rounded-full transition-all"
                 style={{ width: `${stats.taxaFeminizacao}%` }}
@@ -156,11 +130,7 @@ export default async function AdminPage() {
       </div>
 
       {/* Tabela + Gráfico */}
-<<<<<<< HEAD:src/app/(dashboard)/admin/page.tsx
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-=======
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/page.tsx
         <TabelaIES />
         <GraficoProvincias dados={dadosProvincia} />
       </div>

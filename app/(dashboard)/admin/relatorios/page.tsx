@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/app/(dashboard)/admin/relatorios/page.tsx
 "use client"
 
 import React, { useEffect, useState } from 'react'
@@ -149,22 +148,13 @@ export default function RelatoriosPage() {
     })
 
     doc.save('relatorio-academico.pdf')
-  }
-
-=======
-// src/app/(dashboard)/admin/relatorios/page.tsx
-import { BarChart3 } from 'lucide-react'
-
-export default function RelatoriosPage() {
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/relatorios/page.tsx
+  } 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/relatorios/page.tsx
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-xl font-semibold text-gray-900">Relatórios</h1>
         <p className="text-sm text-gray-500 mt-0.5">Relatórios e exportações de dados académicos</p>
       </div>
-<<<<<<< HEAD:src/app/(dashboard)/admin/relatorios/page.tsx
-
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -245,17 +235,7 @@ export default function RelatoriosPage() {
             </table>
             {dados.length === 0 && <div className="p-4 text-gray-600">Nenhum dado disponível para exportar.</div>}
           </div>
-        )}
-=======
-      <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
-        <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4">
-          <BarChart3 className="w-6 h-6 text-blue-600" />
-        </div>
-        <h2 className="text-base font-semibold text-gray-800 mb-2">Módulo em desenvolvimento</h2>
-        <p className="text-sm text-gray-400 max-w-sm mx-auto">
-          Relatórios e exportações CSV/PDF estarão disponíveis em breve.
-        </p>
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/relatorios/page.tsx
+        )} 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/relatorios/page.tsx
       </div>
     </div>
   )

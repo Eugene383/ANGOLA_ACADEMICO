@@ -12,10 +12,6 @@ import {
   BarChart3,
   Settings,
   GraduationCap,
-<<<<<<< HEAD:src/components/dashboard/Sidebar.tsx
-  X,
-=======
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/Sidebar.tsx
 } from 'lucide-react'
 
 const navItems = [
@@ -51,16 +47,12 @@ const navItems = [
   },
 ]
 
-<<<<<<< HEAD:src/components/dashboard/Sidebar.tsx
 interface SidebarProps {
   isOpen?: boolean
   onClose?: () => void
 }
 
 export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
-=======
-export default function Sidebar() {
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/Sidebar.tsx
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
 
@@ -69,7 +61,7 @@ export default function Sidebar() {
   }, [])
 
   return (
-<<<<<<< HEAD:src/components/dashboard/Sidebar.tsx
+  return (
     <>
       {/* Mobile overlay */}
       {isOpen && onClose && (
@@ -84,9 +76,6 @@ export default function Sidebar() {
         'fixed md:static inset-y-0 left-0 w-60 bg-white border-r border-gray-200 flex flex-col z-40 transition-transform duration-200 md:translate-x-0',
         isOpen ? 'translate-x-0' : '-translate-x-full'
       )}>
-=======
-    <aside className="w-60 bg-white border-r border-gray-200 flex flex-col">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/Sidebar.tsx
       {/* Logo */}
       <div className="px-5 py-5 border-b border-gray-200">
         <div className="flex items-center gap-2">
@@ -127,8 +116,6 @@ export default function Sidebar() {
       <div className="px-3 py-3 border-t border-gray-200">
         <p className="text-xs text-gray-400 px-3">v1.0.0 — MES Angola</p>
       </div>
-<<<<<<< HEAD:src/components/dashboard/Sidebar.tsx
-
       {/* Mobile Close Button */}
       {onClose && (
         <button
@@ -140,8 +127,6 @@ export default function Sidebar() {
       )}
       </aside>
     </>
-=======
-    </aside>
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/dashboard/Sidebar.tsx
+  )
   )
 }

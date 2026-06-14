@@ -67,7 +67,6 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-<<<<<<< HEAD:src/components/Navbar.tsx
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 flex items-center justify-between h-14">
         <Link href="/" className="flex items-center gap-2 text-gray-900 font-semibold text-sm sm:text-base">
           <div className="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -83,27 +82,10 @@ export default function Navbar() {
             <>
               <div className="flex items-center gap-2 px-2 sm:px-3 py-1.5 bg-gray-50 rounded-lg border border-gray-200 text-xs sm:text-sm">
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-=======
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
-        <Link href="/" className="flex items-center gap-2 text-gray-900 font-semibold">
-          <div className="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center">
-            <GraduationCap className="w-4 h-4 text-white" />
-          </div>
-          <span>AngolaAcadémico</span>
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-3">
-          {user ? (
-            <>
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-lg border border-gray-200">
-                <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
                   <span className="text-xs text-white font-semibold">
                     {user.nome?.charAt(0).toUpperCase()}
                   </span>
                 </div>
-<<<<<<< HEAD:src/components/Navbar.tsx
                 <span className="font-medium text-gray-700 hidden sm:inline">{user.nome}</span>
                 <span className="font-medium text-gray-700 sm:hidden">{user.nome?.split(' ')[0]}</span>
               </div>
@@ -113,16 +95,6 @@ export default function Navbar() {
               >
                 <LogOut className="w-4 h-4" />
                 <span className="hidden sm:inline">Sair</span>
-=======
-                <span className="text-sm font-medium text-gray-700">{user.nome}</span>
-              </div>
-              <button
-                onClick={handleLogout}
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1.5"
-              >
-                <LogOut className="w-4 h-4" />
-                Sair
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
               </button>
             </>
           ) : (
@@ -130,11 +102,7 @@ export default function Navbar() {
               <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 Entrar
               </Link>
-<<<<<<< HEAD:src/components/Navbar.tsx
               <Link href="/register" className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg transition-colors">
-=======
-              <Link href="/register" className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-lg transition-colors">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
                 Registar
               </Link>
             </>
@@ -144,12 +112,8 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-<<<<<<< HEAD:src/components/Navbar.tsx
           className="md:hidden text-gray-600 hover:text-gray-900 p-1"
           title={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
-=======
-          className="md:hidden text-gray-600 hover:text-gray-900"
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -158,19 +122,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-200 bg-gray-50">
-<<<<<<< HEAD:src/components/Navbar.tsx
           <div className="px-3 sm:px-4 py-3 space-y-2">
             {user ? (
               <>
                 <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-gray-200">
                   <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-=======
-          <div className="px-4 py-3 space-y-2">
-            {user ? (
-              <>
-                <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg border border-gray-200">
-                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
                     <span className="text-xs text-white font-semibold">
                       {user.nome?.charAt(0).toUpperCase()}
                     </span>
@@ -179,11 +135,7 @@ export default function Navbar() {
                 </div>
                 <button
                   onClick={handleLogout}
-<<<<<<< HEAD:src/components/Navbar.tsx
                   className="w-full text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1.5 px-3 py-2 rounded hover:bg-gray-100"
-=======
-                  className="w-full text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1.5 px-3 py-2"
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
                 >
                   <LogOut className="w-4 h-4" />
                   Sair
@@ -191,17 +143,10 @@ export default function Navbar() {
               </>
             ) : (
               <>
-<<<<<<< HEAD:src/components/Navbar.tsx
                 <Link href="/login" className="block text-sm text-gray-600 hover:text-gray-900 px-3 py-2 rounded hover:bg-gray-100">
                   Entrar
                 </Link>
                 <Link href="/register" className="block text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-center">
-=======
-                <Link href="/login" className="block text-sm text-gray-600 hover:text-gray-900 px-3 py-2">
-                  Entrar
-                </Link>
-                <Link href="/register" className="block text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-center">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:components/Navbar.tsx
                   Registar
                 </Link>
               </>

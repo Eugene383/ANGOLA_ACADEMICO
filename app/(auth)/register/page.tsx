@@ -36,44 +36,9 @@ export default function RegisterPage() {
   }
 
   return (
-<<<<<<< HEAD:src/app/(auth)/register/page.tsx
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12">  
       <div className="w-full max-w-md px-4">
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
-=======
-    <div className="min-h-screen flex bg-gray-50">
-      {/* Painel esquerdo */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
-                              radial-gradient(circle at 75% 75%, white 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
-        <div className="relative z-10 flex flex-col justify-between p-12 w-full">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="w-9 h-9 bg-white/20 rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-white font-semibold text-lg">AngolaAcadémico</span>
-          </Link>
-          <div>
-            <h2 className="text-4xl font-bold text-white mb-4 leading-tight">
-              Junta-te à<br />plataforma nacional
-            </h2>
-            <p className="text-blue-100 text-base leading-relaxed">
-              Cria a tua conta para acederes a funcionalidades avançadas, gerir dados da tua IES e acompanhar indicadores académicos.
-            </p>
-          </div>
-          <p className="text-blue-200 text-sm">© 2026 AngolaAcadémico · MES Angola</p>
-        </div>
-      </div>
-
-      {/* Painel direito — formulário */}
-      <div className="flex-1 flex items-center justify-center px-6 py-12">
-        <div className="w-full max-w-sm">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(auth)/register/page.tsx
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(auth)/register/page.tsx
           <Link href="/" className="lg:hidden flex items-center gap-2 justify-center mb-8 hover:opacity-70 transition-opacity">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
               <GraduationCap className="w-5 h-5 text-white" />
@@ -81,13 +46,8 @@ export default function RegisterPage() {
             <span className="font-bold text-gray-900">AngolaAcadémico</span>
           </Link>
 
-<<<<<<< HEAD:src/app/(auth)/register/page.tsx
           <h1 className="text-2xl font-bold text-gray-900 mb-1 text-center">Criar conta</h1>
-          <p className="text-gray-500 text-sm mb-7 text-center">Preenche os dados para te registares</p>
-=======
-          <h1 className="text-2xl font-bold text-gray-900 mb-1">Criar conta</h1>
-          <p className="text-gray-500 text-sm mb-7">Preenche os dados para te registares</p>
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(auth)/register/page.tsx
+          <p className="text-gray-500 text-sm mb-7 text-center">Preenche os dados para te registares</p> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(auth)/register/page.tsx
 
           <form action={action} className="space-y-4">
             {state.error && (

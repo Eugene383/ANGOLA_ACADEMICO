@@ -1,21 +1,16 @@
 'use client'
 
 import { useActionState } from 'react'
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { criarIESAction } from '@/lib/actions/admin.actions'
-import { createClient } from '@/lib/supabase/client'
-=======
-import { criarIESAction } from '@/lib/actions/admin.actions'
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+import { createClient } from '@/lib/supabase/client' 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
 import { useProvincias } from '@/hooks'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
 export default function NovaIESPage() {
   const [state, action, pending] = useActionState(criarIESAction, {})
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
   const [formData, setFormData] = useState({
     id: '',
     nome: '',
@@ -91,48 +86,24 @@ export default function NovaIESPage() {
           <ArrowLeft className="w-5 h-5" />
         </Link>
         <div className="min-w-0">
-          <h1 className="text-lg sm:text-xl font-semibold text-gray-900">Nova instituição</h1>
-=======
-  const { provincias } = useProvincias()
-
-  return (
-    <div className="max-w-2xl space-y-6">
-      <div className="flex items-center gap-3">
-        <Link href="/admin/ies" className="text-gray-400 hover:text-gray-600">
-          <ArrowLeft className="w-5 h-5" />
-        </Link>
-        <div>
-          <h1 className="text-xl font-semibold text-gray-900">Nova instituição</h1>
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+          <h1 className="text-lg sm:text-xl font-semibold text-gray-900">Nova instituição</h1> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
           <p className="text-sm text-gray-500">Registar nova IES na plataforma</p>
         </div>
       </div>
 
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
       <div className="bg-white rounded-lg sm:rounded-xl border border-gray-200 p-4 sm:p-6">
         <form action={action} className="space-y-5">
           {state.error && (
-            <div className="bg-red-50 text-red-700 text-sm px-3 sm:px-4 py-3 rounded-lg border border-red-200">
-=======
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
-        <form action={action} className="space-y-5">
-          {state.error && (
-            <div className="bg-red-50 text-red-700 text-sm px-4 py-3 rounded-lg border border-red-200">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+            <div className="bg-red-50 text-red-700 text-sm px-3 sm:px-4 py-3 rounded-lg border border-red-200"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
               {state.error}
             </div>
           )}
           {state.success && (
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
-            <div className="bg-green-50 text-green-700 text-sm px-3 sm:px-4 py-3 rounded-lg border border-green-200">
-=======
-            <div className="bg-green-50 text-green-700 text-sm px-4 py-3 rounded-lg border border-green-200">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+            <div className="bg-green-50 text-green-700 text-sm px-3 sm:px-4 py-3 rounded-lg border border-green-200"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
               Instituição criada com sucesso!
             </div>
           )}
 
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input type="hidden" name="id" value={formData.id || editId} />
 
@@ -147,21 +118,11 @@ export default function NovaIESPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Universidade Agostinho Neto"
-              />
-=======
-          <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
-              <input name="nome" type="text" required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Universidade Agostinho Neto" />
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+              /> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Sigla</label>
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
               <input
                 name="sigla"
                 type="text"
@@ -172,18 +133,11 @@ export default function NovaIESPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="UAN"
-              />
-=======
-              <input name="sigla" type="text" required maxLength={10}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="UAN" />
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+              /> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Ano de fundação</label>
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
               <input
                 name="ano_fundacao"
                 type="number"
@@ -194,18 +148,11 @@ export default function NovaIESPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="1962"
-              />
-=======
-              <input name="ano_fundacao" type="number" min="1900" max="2024"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="1962" />
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+              /> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Tipo</label>
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
               <select
                 name="tipo"
                 required
@@ -213,12 +160,7 @@ export default function NovaIESPage() {
                 onChange={(e) => setFormData((prev) => ({ ...prev, tipo: e.target.value }))}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-=======
-              <select name="tipo" required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+              > 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
                 <option value="">Seleccionar…</option>
                 <option value="universidade">Universidade</option>
                 <option value="instituto_superior">Instituto Superior</option>
@@ -229,7 +171,6 @@ export default function NovaIESPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Natureza</label>
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
               <select
                 name="natureza"
                 required
@@ -237,12 +178,7 @@ export default function NovaIESPage() {
                 onChange={(e) => setFormData((prev) => ({ ...prev, natureza: e.target.value }))}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-=======
-              <select name="natureza" required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+              > 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
                 <option value="">Seleccionar…</option>
                 <option value="publica">Pública</option>
                 <option value="privada">Privada</option>
@@ -250,7 +186,6 @@ export default function NovaIESPage() {
               </select>
             </div>
 
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
             <div className="sm:col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">Província</label>
               <select
@@ -262,16 +197,7 @@ export default function NovaIESPage() {
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Seleccionar…</option>
-                {provincias.map((p) => (
-=======
-            <div className="col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Província</label>
-              <select name="provincia_id" required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option value="">Seleccionar…</option>
-                {provincias.map(p => (
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+                {provincias.map((p) => ( 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
                   <option key={p.id} value={p.id}>{p.nome}</option>
                 ))}
               </select>
@@ -279,7 +205,6 @@ export default function NovaIESPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Website</label>
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
               <input
                 name="website"
                 type="url"
@@ -288,18 +213,11 @@ export default function NovaIESPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                            focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="https://www.ies.ao"
-              />
-=======
-              <input name="website" type="url"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="https://www.ies.ao" />
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+              /> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Email institucional</label>
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
               <input
                 name="email"
                 type="email"
@@ -312,38 +230,18 @@ export default function NovaIESPage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
-=======
-              <input name="email" type="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
-                           focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="info@ies.ao" />
-            </div>
-          </div>
-
-          <div className="flex gap-3 pt-2">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+          <div className="flex flex-col sm:flex-row gap-3 pt-2"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
             <button
               type="submit"
               disabled={pending}
               className="bg-blue-600 hover:bg-blue-700 disabled:opacity-60
-<<<<<<< HEAD:src/app/(dashboard)/admin/ies/nova/page.tsx
                          text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors w-full sm:w-auto"
             >
               {pending ? 'A guardar…' : editMode ? 'Salvar alterações' : 'Criar instituição'}
             </button>
             <Link href="/admin/ies"
               className="px-5 py-2.5 text-sm text-gray-600 hover:text-gray-800 border
-                         border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-center">
-=======
-                         text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors"
-            >
-              {pending ? 'A guardar…' : 'Criar instituição'}
-            </button>
-            <Link href="/admin/ies"
-              className="px-5 py-2.5 text-sm text-gray-600 hover:text-gray-800 border
-                         border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
->>>>>>> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
+                         border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-center"> 9d0e92bd8298e8343bddeae7d5250d49f09d22fc:app/(dashboard)/admin/ies/nova/page.tsx
               Cancelar
             </Link>
           </div>
